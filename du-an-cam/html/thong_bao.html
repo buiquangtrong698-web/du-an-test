@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo - CampusConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css">
+    <link rel="stylesheet" href="../css/thong_bao.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="trang_chu.html" aria-label="steamCam">
+        <span class="brand-mark">
+          <img src="../img/logo.png" alt="">
+        </span>
+        <span>steam<span>Cam</span></span>
+      </a>
+
+        <nav class="nav-menu" aria-label="Điều hướng chính">
+          <a class="nav-item" href="trang_chu.html">
+          <svg viewBox="0 0 24 24"><path d="M3 11.2 12 4l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.8Z"/></svg>
+          <span>Trang chủ</span>
+        </a>
+          <a class="nav-item" href="quy_dinh.html">
+          <svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Zm2 5h6M9 12h6"/></svg>
+          <span>Quy định</span>
+        </a>
+          <a class="nav-item" href="thanh_vien.html">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Thành viên</span>
+        </a>
+          <a class="nav-item" href="giao_luu.html">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.35 8.8 8.8 0 0 1-3.6-.75L3 20l1-4.1A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5ZM8 12h.01M12 12h.01M16 12h.01"/></svg>
+          <span>Giao lưu</span>
+        </a>
+          <a class="nav-item" href="su_kien.html">
+          <svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/></svg>
+          <span>Sự kiện</span>
+        </a>
+          <a class="nav-item active" href="thong_bao.html" aria-current="page">
+          <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+          <span>Thông báo</span>
+        </a>
+        </nav>
+        <a class="sidebar-user" href="tai_khoan.html">
+        <img src="https://i.pravatar.cc/120?img=12" alt="Ảnh đại diện Nguyễn Minh">
+          <div><strong>Nguyễn Minh</strong><span>Thành viên</span></div>
+        <span class="icon-button" aria-hidden="true">›</span>
+        </a>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+        <button class="mobile-menu" type="button" aria-label="Mở menu">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+          <div>
+            <h1>Thông báo</h1>
+          </div>
+        </header>
+        <div class="content">
+          <div class="page-heading notification-page-heading">
+            <div>
+            <span class="section-kicker">TRUNG TÂM THÔNG BÁO</span>
+              <h2>Thông báo gần đây</h2>
+              <p>Cập nhật mới nhất từ cộng đồng của bạn.</p>
+            </div>
+          <span class="notification-count" id="notificationCount" aria-live="polite" hidden></span>
+          </div>
+          <div class="notification-toolbar">
+            <div class="notification-filter-group" role="group" aria-label="Lọc thông báo">
+            <button class="notification-filter is-active" type="button" id="allNotificationsFilter" aria-pressed="true">
+              Tất cả <span class="notification-filter-count" id="allNotificationCount">0</span>
+            </button>
+            <button class="notification-filter" type="button" id="unreadNotificationsFilter" aria-pressed="false">
+              Chưa đọc <span class="notification-filter-count" id="unreadNotificationCount">0</span>
+            </button>
+          </div>
+          <button class="notification-mark-all" type="button" id="markAllNotificationsRead" disabled>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"></path></svg>
+            Đọc tất cả
+          </button>
+          </div>
+          <p class="notification-action-status" id="notificationActionStatus" role="status" aria-live="polite"></p>
+          <div class="notification-list" id="notificationList" aria-live="polite"></div>
+          <div class="notification-empty" id="notificationEmpty" role="status">
+            <div class="notification-empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+          </div>
+            <h3>Chưa có thông báo</h3>
+            <p>Thông báo mới sẽ xuất hiện tại đây.</p>
+          </div>
+          <div class="modal-backdrop notification-detail-backdrop" id="notificationDetailModal" aria-hidden="true">
+            <section class="modal notification-detail-modal" role="dialog" aria-modal="true" aria-labelledby="notificationDetailTitle">
+              <div class="notification-detail-header">
+                <div class="notification-detail-icon" id="notificationDetailIcon" aria-hidden="true"></div>
+                <div class="notification-detail-category">
+                <span class="notification-type" id="notificationDetailType"></span>
+                <span class="notification-detail-kicker">Thông tin chi tiết</span>
+              </div>
+              <button class="icon-button" type="button" id="closeNotificationDetail" aria-label="Đóng">×</button>
+              </div>
+              <div class="notification-detail-content">
+                <h3 id="notificationDetailTitle"></h3>
+                <div class="notification-detail-message-panel">
+                <span class="notification-detail-message-label">Nội dung thông báo</span>
+                  <p class="notification-detail-message" id="notificationDetailMessage"></p>
+                </div>
+              </div>
+              <div class="notification-detail-footer">
+                <div class="notification-detail-time-block">
+                <span class="notification-detail-time-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+                </span>
+                <span class="notification-detail-time-label">Thời gian nhận</span>
+                <time class="notification-detail-time" id="notificationDetailTime"></time>
+              </div>
+              <button class="primary-button" type="button" id="dismissNotificationDetail">Đóng</button>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+    document.querySelector(".mobile-menu").addEventListener("click", function () {
+      document.querySelector(".sidebar").classList.toggle("open");
+    });
+  </script>
+    <script src="../js/api-client.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/notifications-api.js"></script>
+    <script src="../js/thong_bao.js"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện - steamCam</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css?v=20261127-confirm">
+    <link rel="stylesheet" href="../css/su_kien.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="trang_chu.html" aria-label="steamCam">
+        <span class="brand-mark"><img src="../img/logo.png" alt=""></span>
+        <span>steam<span>Cam</span></span>
+      </a>
+        <nav class="nav-menu" aria-label="Điều hướng chính">
+          <a class="nav-item" href="trang_chu.html"><svg viewBox="0 0 24 24"><path d="M3 11.2 12 4l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.8Z"/></svg><span>Trang chủ</span></a>
+          <a class="nav-item" href="quy_dinh.html"><svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Zm2 5h6M9 12h6"/></svg><span>Quy định</span></a>
+          <a class="nav-item" href="thanh_vien.html"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Thành viên</span></a>
+          <a class="nav-item" href="giao_luu.html"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.35 8.8 8.8 0 0 1-3.6-.75L3 20l1-4.1A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5Z"/></svg><span>Giao lưu</span></a>
+          <a class="nav-item active" href="su_kien.html" aria-current="page"><svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/></svg><span>Sự kiện</span></a>
+          <a class="nav-item" href="thong_bao.html"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><span>Thông báo</span></a>
+        </nav>
+        <a class="sidebar-user" href="tai_khoan.html">
+        <img src="https://i.pravatar.cc/120?img=12" alt="Ảnh đại diện Nguyễn Minh">
+          <div><strong>Nguyễn Minh</strong><span>Thành viên</span></div>
+        <span class="icon-button" aria-hidden="true">›</span>
+        </a>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+        <button class="mobile-menu" type="button" aria-label="Mở menu">☰</button>
+          <div>
+            <h1>Sự kiện</h1>
+          </div>
+          <button class="primary-button topbar-create" id="addEventButton" type="button">
+          <span aria-hidden="true">+</span> Tạo sự kiện
+        </button>
+        </header>
+        <div class="content">
+          <section class="event-hero">
+            <div class="event-hero-copy">
+            <span class="hero-badge">GẶP GỠ &amp; KẾT NỐI</span>
+              <h2>Cùng nhau tạo nên<br><span>những khoảnh khắc đáng nhớ.</span></h2>
+              <p>Khám phá hoạt động mới, gặp gỡ thành viên và đăng ký tham gia sự kiện của cộng đồng.</p>
+            </div>
+          </section>
+          <section class="event-stats" aria-label="Tổng quan sự kiện">
+            <article class="event-stat"><span class="stat-icon orange">◷</span>
+              <div><strong id="upcomingCount">0</strong><span>Sự kiện sắp diễn ra</span></div>
+            </article>
+          </section>
+          <section class="events-section" aria-labelledby="eventListHeading">
+            <div class="section-heading">
+              <div><span class="section-kicker">LỊCH CỘNG ĐỒNG</span>
+                <h3 id="eventListHeading">Khám phá sự kiện</h3>
+              </div>
+              <label class="event-search">
+              <span class="visually-hidden">Tìm sự kiện</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+              <input id="eventSearch" type="search" placeholder="Tìm tên, địa điểm..." autocomplete="off">
+            </label>
+            </div>
+            <div class="event-controls">
+              <div class="event-tabs" role="group" aria-label="Lọc theo trạng thái">
+              <button class="event-tab active" type="button" data-filter="upcoming" aria-pressed="true">Sắp diễn ra</button>
+              <button class="event-tab" type="button" data-filter="past" aria-pressed="false">Đã kết thúc</button>
+            </div>
+            </div>
+            <div class="event-grid" id="eventList" aria-live="polite"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="eventModal" aria-hidden="true">
+      <section class="modal event-modal" role="dialog" aria-modal="true" aria-labelledby="eventModalTitle">
+        <div class="modal-heading">
+          <div><span class="section-kicker">THÊM HOẠT ĐỘNG MỚI</span>
+            <h2 id="eventModalTitle">Tạo sự kiện</h2>
+          </div>
+        <button class="icon-button" id="closeEventModal" type="button" aria-label="Đóng">×</button>
+        </div>
+        <form id="eventForm">
+          <label>Tên sự kiện
+          <input id="eventTitle" name="title" type="text" maxlength="80" required>
+        </label>
+          <label>Mô tả
+          <textarea id="eventDescription" name="description" rows="3" maxlength="240" required placeholder="Sự kiện có hoạt động gì?"></textarea>
+        </label>
+          <label>Chủ đề
+          <input id="eventCategory" name="category" type="text" maxlength="50" required>
+        </label>
+          <div class="form-row">
+            <label>Ngày
+            <input id="eventDate" name="date" type="date" required>
+          </label>
+            <label>Giờ bắt đầu
+            <input id="eventTime" name="time" type="time" required>
+          </label>
+          </div>
+          <label>Địa điểm hoặc nền tảng
+          <input id="eventLocation" name="location" type="text" maxlength="100" required>
+        </label>
+          <div class="modal-actions">
+          <button class="secondary-button" id="cancelEvent" type="button">Hủy</button>
+          <button class="primary-button" type="submit">Tạo sự kiện</button>
+        </div>
+        </form>
+      </section>
+    </div>
+    <div class="toast" id="eventToast" role="status" aria-live="polite"></div>
+    <script src="../js/api-client.js"></script>
+    <script src="../js/confirm-dialog.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/events-api.js?v=20261127-event-form"></script>
+  </body>
+</html>

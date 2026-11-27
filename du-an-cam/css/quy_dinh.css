@@ -1,0 +1,74 @@
+.rules-list {
+  display: grid;
+  gap: 12px
+}
+
+.rule-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  gap: 14px
+}
+
+.rule-number {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #fff0e5;
+  color: var(--orange);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800
+}
+
+.rule-card h3 {
+  margin: 2px 0 6px;
+  font-size: 14px
+}
+
+.rule-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65
+}
+
+.rule-actions {
+  display: flex;
+  gap: 4px
+}
+
+.rule-actions button {
+  min-width: 34px;
+  height: 34px;
+  border: 0;
+  border-radius: 7px;
+  background: #f7f7fa;
+  color: #898b9a;
+  padding: 0 8px;
+  font-size: 9px;
+  font-weight: 700
+}
+
+.rule-actions button:hover {
+  background: #fff0e5;
+  color: var(--orange)
+}
+
+.modal-backdrop.open {
+  display: grid
+}
+
+@media(max-width:760px) {
+  .rule-card {
+    grid-template-columns: 42px 1fr
+  }
+
+  .rule-actions {
+    grid-column: 2
+  }
+}

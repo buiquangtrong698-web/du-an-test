@@ -1,0 +1,195 @@
+.community-hero {
+  min-height: 300px;
+  border-radius: 16px;
+  background: linear-gradient(90deg, rgba(59, 39, 27, .68) 0%, rgba(59, 39, 27, .42) 48%, rgba(59, 39, 27, .1) 100%), url("../img/giao_luu.png") center/cover no-repeat;
+  color: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 45px 52px
+}
+
+.community-copy {
+  width: 58%;
+  position: relative;
+  z-index: 2
+}
+
+.community-copy h2 {
+  font-size: 32px;
+  line-height: 1.25;
+  margin: 0 0 12px
+}
+
+.community-copy h2 span {
+  color: #ff9b50
+}
+
+.community-copy p {
+  max-width: 430px;
+  color: #ddd3ca;
+  font-size: 12px;
+  line-height: 1.7
+}
+
+.community-art {
+  position: absolute;
+  right: 0;
+  width: 430px;
+  height: 300px
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .07)
+}
+
+.bubble-one {
+  width: 260px;
+  height: 260px;
+  right: 40px;
+  top: 20px
+}
+
+.bubble-two {
+  width: 170px;
+  height: 170px;
+  right: 85px;
+  top: 65px
+}
+
+.chat-card {
+  position: absolute;
+  height: 58px;
+  width: 210px;
+  background: white;
+  color: var(--ink);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 11px
+}
+
+.chat-card img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%
+}
+
+.chat-card p {
+  display: flex;
+  flex-direction: column;
+  margin: 0
+}
+
+.chat-card strong {
+  font-size: 9px
+}
+
+.chat-card span {
+  color: var(--muted);
+  font-size: 8px
+}
+
+.chat-one {
+  right: 55px;
+  top: 38px
+}
+
+.chat-two {
+  right: 150px;
+  top: 126px
+}
+
+.join-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px
+}
+
+.join-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  min-height: 156px;
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 12px;
+  padding: 22px
+}
+
+.join-logo {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: #f97316;
+  font-size: 25px;
+  font-weight: 800
+}
+
+.join-card h3 {
+  margin: 5px 0
+}
+
+.join-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 10px
+}
+
+.join-card div:nth-child(2)>span {
+  color: #9b9dab;
+  font-size: 8px
+}
+
+.join-button {
+  grid-column: 2;
+  justify-self: start;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding: 0 11px;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 9px;
+  font-weight: 800
+}
+
+@media(max-width:760px) {
+  .community-hero {
+    min-height: 380px;
+    padding: 32px 28px;
+    background-position: center, 65% center
+  }
+
+  .community-copy {
+    width: 100%
+  }
+
+  .community-copy h2 {
+    font-size: 27px
+  }
+
+  .community-art {
+    opacity: .8;
+    right: -130px;
+    top: 100px
+  }
+
+  .join-grid {
+    grid-template-columns: 1fr
+  }
+}
+
+.community-hero {
+  background-image: linear-gradient(90deg, rgba(59, 39, 27, .92) 0%, rgba(59, 39, 27, .52) 48%, rgba(59, 39, 27, 0) 100%), url("../img/giao_luu.png")
+}

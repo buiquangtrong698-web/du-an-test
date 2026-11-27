@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy định - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css?v=20261127-confirm">
+    <link rel="stylesheet" href="../css/quy_dinh.css">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="trang_chu.html"><span class="brand-mark"><img src="../img/logo.png" alt=""></span><span>steam<span>Cam</span></span></a>
+        <nav class="nav-menu">
+          <a class="nav-item" href="trang_chu.html"><svg viewBox="0 0 24 24"><path d="M3 11.2 12 4l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.8Z"/></svg><span>Trang chủ</span></a>
+          <a class="nav-item active" href="quy_dinh.html"><svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Zm2 5h6M9 12h6"/></svg><span>Quy định</span></a>
+          <a class="nav-item" href="thanh_vien.html"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Thành viên</span></a>
+          <a class="nav-item" href="giao_luu.html"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.35 8.8 8.8 0 0 1-3.6-.75L3 20l1-4.1A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5Z"/></svg><span>Giao lưu</span></a>
+          <a class="nav-item" href="su_kien.html"><svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/></svg><span>Sự kiện</span></a>
+          <a class="nav-item" href="thong_bao.html"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><span>Thông báo</span></a>
+        </nav>
+        <a class="sidebar-user" href="tai_khoan.html"><img src="https://i.pravatar.cc/120?img=12" alt="Ảnh đại diện Nguyễn Minh">
+          <div><strong>Nguyễn Minh</strong><span>Thành viên</span></div><span class="icon-button" aria-hidden="true">›</span>
+        </a>
+      </aside>
+      <main class="main">
+        <header class="topbar"><button class="mobile-menu" type="button">☰</button>
+          <div>
+            <h1>Quy định</h1>
+          </div>
+        </header>
+        <div class="content">
+          <div class="page-heading">
+            <div>
+              <h2>Quy định nhóm</h2>
+              <p>Giữ môi trường thân thiện, tích cực và hiệu quả.</p>
+            </div><button class="primary-button" type="button" id="addRuleButton">+ Thêm quy định</button>
+          </div>
+          <div class="rules-list" id="rulesList"></div>
+        </div>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="ruleModal">
+      <div class="modal">
+        <div class="modal-heading">
+          <h3 id="modalTitle">Thêm quy định</h3><button class="icon-button" type="button" id="closeModal">×</button>
+        </div>
+        <form id="ruleForm"><input type="hidden" id="ruleId">
+          <label>Tiêu đề quy định<input type="text" id="ruleTitle" required></label>
+          <label>Nội dung<textarea id="ruleDescription" rows="4" required></textarea></label>
+          <div class="modal-actions"><button type="button" class="secondary-button" id="cancelModal">Hủy</button><button type="submit" class="primary-button">Lưu quy định</button></div>
+        </form>
+      </div>
+    </div>
+    <script>document.querySelector(".mobile-menu").onclick=()=>document.querySelector(".sidebar").classList.toggle("open");</script>
+    <script src="../js/api-client.js"></script>
+    <script src="../js/confirm-dialog.js"></script>
+    <script src="../js/profile.js"></script>
+    <script src="../js/rules-api.js"></script>
+  </body>
+</html>

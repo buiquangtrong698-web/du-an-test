@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản - CampusConnect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css?v=20261127-confirm">
+    <link rel="stylesheet" href="../css/tai_khoan.css?v=20261127-introduction">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="trang_chu.html" aria-label="steamCam">
+        <span class="brand-mark">
+          <img src="../img/logo.png" alt="">
+        </span>
+        <span>steam<span>Cam</span></span>
+      </a>
+
+        <nav class="nav-menu" aria-label="Điều hướng chính">
+          <a class="nav-item" href="trang_chu.html">
+          <svg viewBox="0 0 24 24"><path d="M3 11.2 12 4l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.8Z"/></svg>
+          <span>Trang chủ</span>
+        </a>
+          <a class="nav-item" href="quy_dinh.html">
+          <svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Zm2 5h6M9 12h6"/></svg>
+          <span>Quy định</span>
+        </a>
+          <a class="nav-item" href="thanh_vien.html">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span>Thành viên</span>
+        </a>
+          <a class="nav-item" href="giao_luu.html">
+          <svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.35 8.8 8.8 0 0 1-3.6-.75L3 20l1-4.1A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5ZM8 12h.01M12 12h.01M16 12h.01"/></svg>
+          <span>Giao lưu</span>
+        </a>
+          <a class="nav-item" href="su_kien.html">
+          <svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/></svg>
+          <span>Sự kiện</span>
+        </a>
+          <a class="nav-item" href="thong_bao.html">
+          <svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>
+          <span>Thông báo</span>
+        </a>
+        </nav>
+        <a class="sidebar-user" href="tai_khoan.html" aria-current="page">
+        <img src="https://i.pravatar.cc/120?img=12" alt="Ảnh đại diện Nguyễn Minh">
+          <div><strong>Nguyễn Minh</strong><span>Thành viên</span></div>
+        <span class="icon-button" aria-hidden="true">›</span>
+        </a>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+        <button class="mobile-menu" type="button" aria-label="Mở menu">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+          <div>
+            <h1>Hồ Sơ</h1>
+          </div>
+        </header>
+        <div class="content">
+          <div class="account-layout">
+            <aside class="profile-card">
+              <div class="profile-cover"></div>
+            <img src="../img/avatar-default.svg" alt="Ảnh đại diện mặc định">
+              <h3>Nguyễn Minh</h3>
+              <p>Biệt danh</p>
+            <span class="role-badge" id="accountPositionBadge">Thành viên</span>
+            </aside>
+            <article class="account-info">
+              <div class="info-heading">
+                <h3>Thông tin cá nhân</h3>
+              <button class="secondary-button" type="button" id="editButton">Chỉnh sửa</button>
+              </div>
+              <div class="info-grid">
+                <div><span>tên</span><strong id="fullName">Nguyễn Minh</strong></div>
+                <div><span>Biệt danh</span><strong id="nickname">nguyenminh</strong></div>
+                <div><span>Chức vụ</span><strong id="accountPosition">Thành viên</strong></div>
+                <div><span>Quyền truy cập</span><strong id="accountRole">Thành viên</strong></div>
+                <div><span>Ngày tham gia</span><strong>15/09/2025</strong></div>
+                <div><span>Trạng thái</span><strong class="online-status"><i></i> Đang hoạt động</strong></div>
+                <div class="info-introduction"><span>Giới thiệu</span><strong id="accountIntroduction">Chưa có giới thiệu</strong></div>
+              </div>
+              <div class="account-actions">
+              <button class="logout-button" type="button" id="logoutButton">
+                <svg viewBox="0 0 24 24"><path d="M10 17l5-5-5-5M15 12H3M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/></svg>
+                Đăng xuất
+              </button>
+            </div>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="modal-backdrop" id="editModal" aria-hidden="true">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+        <div class="modal-heading">
+          <h3 id="editTitle">Chỉnh sửa thông tin</h3><button class="icon-button" type="button" id="closeModal" aria-label="Đóng">×</button>
+        </div>
+        <form id="editForm">
+          <div class="edit-avatar-picker">
+          <img id="editAvatarPreview" src="../img/avatar-default.svg" alt="Ảnh đại diện xem trước">
+            <div>
+              <label for="editAvatarInput">Ảnh đại diện</label>
+            <input type="file" id="editAvatarInput" accept="image/*">
+            <small>Chọn ảnh có dung lượng tối đa 1,5 MB.</small>
+            </div>
+          </div>
+          <label>Họ và tên<input type="text" id="editFullName" maxlength="60" value="Nguyễn Minh" required></label>
+          <label>Biệt danh<input type="text" id="editNickname" maxlength="40" value="nguyenminh" required></label>
+          <label for="editIntroduction">Giới thiệu (không bắt buộc)<textarea id="editIntroduction" maxlength="5000" rows="4" placeholder="Chia sẻ đôi điều về bạn..."></textarea></label>
+          <div class="modal-actions"><button class="secondary-button" type="button" id="cancelModal">Hủy</button><button class="primary-button" type="submit">Lưu thay đổi</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="toast" id="toast">Đã lưu thay đổi</div>
+    <script src="../js/api-client.js?v=20261127-profile-introduction"></script>
+    <script src="../js/confirm-dialog.js"></script>
+    <script src="../js/profile.js?v=20261127-profile-introduction"></script>
+    <script>
+    document.querySelector(".mobile-menu").addEventListener("click", function () {
+      document.querySelector(".sidebar").classList.toggle("open");
+    });
+
+    var editModal = document.getElementById("editModal");
+    var selectedAvatar = window.SteamCamProfile.defaultAvatar;
+    var avatarReadPending = false;
+    var avatarReadToken = 0;
+    var toastTimer;
+    function showToast(message) {
+      var toast = document.getElementById("toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 2600);
+    }
+    function closeModal() {
+      editModal.classList.remove("open");
+      editModal.setAttribute("aria-hidden", "true");
+      document.getElementById("editButton").focus();
+    }
+    document.getElementById("editButton").addEventListener("click", function () {
+      var profile = window.SteamCamProfile.get();
+      document.getElementById("editFullName").value = profile ? profile.fullName : document.getElementById("fullName").textContent;
+      document.getElementById("editNickname").value = profile ? profile.nickname : document.getElementById("nickname").textContent;
+      document.getElementById("editIntroduction").value = profile ? profile.introduction || "" : "";
+      avatarReadToken++;
+      avatarReadPending = false;
+      selectedAvatar = profile && profile.avatar ? profile.avatar : window.SteamCamProfile.defaultAvatar;
+      document.getElementById("editAvatarPreview").src = selectedAvatar;
+      document.getElementById("editAvatarInput").value = "";
+      editModal.classList.add("open"); editModal.setAttribute("aria-hidden", "false");
+    });
+    document.getElementById("editAvatarInput").addEventListener("change", function (event) {
+      var input = event.currentTarget;
+      var file = input.files[0];
+      var readToken = ++avatarReadToken;
+      avatarReadPending = false;
+      if (!file) return;
+      if (!file.type.startsWith("image/")) {
+        input.value = "";
+        showToast("Vui lòng chọn một tệp hình ảnh.");
+        return;
+      }
+      if (file.size > 1572864) {
+        input.value = "";
+        showToast("Ảnh đại diện cần có dung lượng tối đa 1,5 MB.");
+        return;
+      }
+
+      avatarReadPending = true;
+      var reader = new FileReader();
+      reader.onload = function () {
+        if (readToken !== avatarReadToken) return;
+        avatarReadPending = false;
+        if (typeof reader.result !== "string") {
+          showToast("Không thể đọc ảnh này. Hãy thử chọn ảnh khác.");
+          return;
+        }
+        selectedAvatar = reader.result;
+        document.getElementById("editAvatarPreview").src = selectedAvatar;
+      };
+      reader.onerror = function () {
+        if (readToken !== avatarReadToken) return;
+        avatarReadPending = false;
+        input.value = "";
+        showToast("Không thể đọc ảnh này. Hãy thử chọn ảnh khác.");
+      };
+      reader.readAsDataURL(file);
+    });
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    document.getElementById("cancelModal").addEventListener("click", closeModal);
+    document.getElementById("editForm").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      if (avatarReadPending) {
+        showToast("Ảnh vẫn đang được tải. Vui lòng đợi một chút.");
+        return;
+      }
+      var oldProfile = window.SteamCamProfile.get() || {};
+      var profile = {
+        fullName: document.getElementById("editFullName").value.trim(),
+        nickname: document.getElementById("editNickname").value.trim(),
+        username: oldProfile.username || "nguyenminh",
+        role: oldProfile.role || "user",
+        avatar: selectedAvatar,
+        email: oldProfile.email || "",
+        introduction: document.getElementById("editIntroduction").value.trim()
+      };
+      if (!profile.fullName || !profile.nickname) {
+        showToast("Vui lòng nhập họ tên và biệt danh.");
+        return;
+      }
+      try {
+        profile = await window.SteamCamProfile.save(profile);
+      } catch (error) {
+        showToast(error.message);
+        return;
+      }
+      closeModal();
+      showToast("Đã lưu thay đổi");
+    });
+
+    document.getElementById("logoutButton").addEventListener("click", async function () {
+      var message = "Bạn có chắc muốn đăng xuất khỏi tài khoản không?";
+      var confirmed = window.SteamCamConfirm && window.SteamCamConfirm.ask
+        ? await window.SteamCamConfirm.ask({
+          title: "Xác nhận đăng xuất?",
+          message: message,
+          confirmLabel: "Đăng xuất"
+        })
+        : window.confirm(message);
+      if (!confirmed) return;
+
+      try {
+        await window.SteamCamAPI.request("/auth/logout", { method: "POST" });
+      } catch (error) {
+        showToast(error.message);
+      } finally {
+        window.SteamCamAPI.clearSession();
+        window.location.href = "dang_nhap.html";
+      }
+    });
+  </script>
+  </body>
+</html>

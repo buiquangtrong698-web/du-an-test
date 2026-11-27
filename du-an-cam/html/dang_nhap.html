@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css">
+    <link rel="stylesheet" href="../css/dang_nhap.css">
+  </head>
+  <body class="auth-body">
+    <main class="auth-shell">
+      <section class="auth-banner">
+        <a class="brand" href="trang_chu.html">
+        <span class="brand-mark"><img src="../img/logo.png" alt=""></span>
+        <span>steam<span>Cam</span></span>
+      </a>
+        <div class="auth-banner-copy">
+        <span class="hero-badge">CHÀO MỪNG TRỞ LẠI</span>
+          <h1>Kết nối để cùng<br><span>phát triển mỗi ngày.</span></h1>
+          <p>Hãy đăng nhập để tiếp tục chia sẻ kiến thức, tham gia hoạt động và kết nối với cộng đồng.</p>
+        </div>
+      </section>
+      <section class="auth-panel">
+      <span class="section-kicker">THÀNH VIÊN CAMPUSCONNECT</span>
+        <h2>Đăng nhập</h2>
+        <p>Nhập thông tin tài khoản để tiếp tục.</p>
+        <form class="auth-form" id="loginForm">
+          <label>Tên đăng nhập
+          <input type="text" name="username" required placeholder="Nhập tên đăng nhập">
+        </label>
+          <label>Mật khẩu
+          <input type="password" name="password" required placeholder="Nhập mật khẩu">
+        </label>
+          <div class="auth-options">
+            <label><input type="checkbox" name="remember"> Ghi nhớ đăng nhập</label>
+          <a href="#">Quên mật khẩu?</a>
+          </div>
+        <button class="primary-button" type="submit">Đăng nhập</button>
+          <p class="auth-error" id="loginError" aria-live="polite"></p>
+        </form>
+        <div class="auth-switch">Chưa có tài khoản? <a href="dang_ky.html">Đăng ký ngay</a></div>
+      </section>
+    </main>
+    <script src="../js/api-client.js"></script>
+    <script src="../js/login.js"></script>
+  </body>
+</html>

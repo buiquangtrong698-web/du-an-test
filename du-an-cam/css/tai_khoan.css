@@ -1,0 +1,329 @@
+.account-layout {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.78fr) minmax(0, 1.7fr);
+  align-items: start;
+  gap: 24px;
+}
+
+.profile-card,
+.account-info {
+  overflow: hidden;
+  border: 1px solid #ece3da;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(67, 41, 27, 0.07);
+}
+
+.profile-card {
+  position: relative;
+  min-height: 370px;
+  text-align: center;
+}
+
+.profile-cover {
+  position: relative;
+  height: 142px;
+  overflow: hidden;
+  background: linear-gradient(125deg, #43291b 4%, #75421f 52%, #f28a3a 100%);
+}
+
+.profile-cover::before,
+.profile-cover::after {
+  position: absolute;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  content: "";
+}
+
+.profile-cover::before {
+  top: -98px;
+  right: -44px;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-cover::after {
+  top: -54px;
+  right: 7px;
+  width: 164px;
+  height: 164px;
+}
+
+.profile-card>img {
+  position: relative;
+  width: 116px;
+  height: 116px;
+  margin-top: -60px;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  background: #fff7ee;
+  box-shadow: 0 8px 22px rgba(67, 41, 27, 0.16);
+  object-fit: cover;
+}
+
+.profile-card h3 {
+  margin: 14px 20px 4px;
+  color: var(--ink);
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.profile-card p {
+  margin: 0 20px 16px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.role-badge {
+  display: inline-flex;
+  min-height: 30px;
+  align-items: center;
+  padding: 0 13px;
+  border: 1px solid #f6dcc5;
+  border-radius: 999px;
+  background: #fff6ed;
+  color: #b95714;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.account-info {
+  padding: 28px;
+}
+
+.info-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 21px;
+  border-bottom: 1px solid #f0e9e2;
+}
+
+.info-heading h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.info-heading .secondary-button {
+  min-height: 40px;
+  padding: 0 15px;
+  border-color: #e9ddd2;
+  border-radius: 10px;
+  font-size: 11px;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.info-heading .secondary-button:hover {
+  transform: translateY(-1px);
+  border-color: #e7b98f;
+  background: #fff8f1;
+}
+
+.info-heading .secondary-button:focus-visible,
+.logout-button:focus-visible {
+  outline: 3px solid rgba(249, 115, 22, 0.3);
+  outline-offset: 3px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 22px 0;
+}
+
+.info-grid>div {
+  display: flex;
+  min-height: 82px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px 16px;
+  border: 1px solid #f0e9e2;
+  border-radius: 13px;
+  background: #fdfbf9;
+}
+
+.info-grid>.info-introduction {
+  grid-column: 1 / -1;
+  min-height: 100px;
+  align-items: flex-start;
+}
+
+.info-introduction strong {
+  font-weight: 500 !important;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.info-grid>div span {
+  margin-bottom: 7px;
+  color: #8e7c70;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.info-grid>div strong {
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.info-grid .online-status {
+  color: #388260;
+}
+
+.online-status i {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #43a77b;
+  box-shadow: 0 0 0 3px #e6f4ec;
+  vertical-align: 1px;
+}
+
+.account-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 18px;
+  border-top: 1px solid #f0e9e2;
+}
+
+.logout-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 0 15px;
+  border: 1px solid #f0d7d4;
+  border-radius: 10px;
+  background: #fffafa;
+  color: #b94f4d;
+  font-size: 11px;
+  font-weight: 700;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease;
+}
+
+.logout-button:hover {
+  transform: translateY(-1px);
+  border-color: #e5b7b2;
+  background: #fff3f1;
+}
+
+.logout-button svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.edit-avatar-picker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.edit-avatar-picker>img {
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  border: 1px solid #f1d8c0;
+  border-radius: 50%;
+  background: #fff3e7;
+  object-fit: cover;
+}
+
+.edit-avatar-picker>div {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.modal .edit-avatar-picker label {
+  font-weight: 700;
+}
+
+.edit-avatar-picker input {
+  padding: 7px;
+  font-size: 10px;
+}
+
+.edit-avatar-picker small {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .account-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .profile-card {
+    min-height: 330px;
+  }
+
+  .profile-cover {
+    height: 120px;
+  }
+
+  .profile-card>img {
+    width: 104px;
+    height: 104px;
+    margin-top: -54px;
+  }
+}
+
+@media (max-width: 600px) {
+  .account-info {
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .profile-card {
+    min-height: 310px;
+    border-radius: 16px;
+  }
+
+  .info-heading {
+    align-items: flex-start;
+  }
+
+  .info-heading h3 {
+    padding-top: 8px;
+    font-size: 16px;
+  }
+
+  .info-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    padding: 17px 0;
+  }
+
+  .info-grid>div {
+    min-height: 72px;
+    padding: 12px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .info-heading .secondary-button,
+  .logout-button {
+    transition: none;
+  }
+}

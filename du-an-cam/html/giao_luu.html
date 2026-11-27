@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao lưu - CampusConnect</title>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chung.css">
+    <link rel="stylesheet" href="../css/giao_luu.css?v=20261127-background-contrast">
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a class="brand" href="trang_chu.html"><span class="brand-mark"><img src="../img/logo.png" alt=""></span><span>steam<span>Cam</span></span></a>
+        <nav class="nav-menu">
+          <a class="nav-item" href="trang_chu.html"><svg viewBox="0 0 24 24"><path d="M3 11.2 12 4l9 7.2V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-8.8Z"/></svg><span>Trang chủ</span></a>
+          <a class="nav-item" href="quy_dinh.html"><svg viewBox="0 0 24 24"><path d="M7 3h10a2 2 0 0 1 2 2v16l-7-3-7 3V5a2 2 0 0 1 2-2Zm2 5h6M9 12h6"/></svg><span>Quy định</span></a>
+          <a class="nav-item" href="thanh_vien.html"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Thành viên</span></a>
+          <a class="nav-item active" href="giao_luu.html"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.35 8.8 8.8 0 0 1-3.6-.75L3 20l1-4.1A8.2 8.2 0 0 1 3 11.5C3 6.8 7 3 12 3s9 3.8 9 8.5Z"/></svg><span>Giao lưu</span></a>
+          <a class="nav-item" href="su_kien.html"><svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/></svg><span>Sự kiện</span></a>
+          <a class="nav-item" href="thong_bao.html"><svg viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg><span>Thông báo</span></a>
+        </nav>
+        <a class="sidebar-user" href="tai_khoan.html"><img src="https://i.pravatar.cc/120?img=12" alt="Ảnh đại diện Nguyễn Minh">
+          <div><strong>Nguyễn Minh</strong><span>Thành viên</span></div><span class="icon-button" aria-hidden="true">›</span>
+        </a>
+      </aside>
+      <main class="main">
+        <header class="topbar"><button class="mobile-menu" type="button">☰</button>
+          <div>
+            <h1>Giao lưu</h1>
+          </div>
+        </header>
+        <div class="content">
+          <section class="community-hero">
+            <div class="community-copy"><span class="hero-badge">CÙNG NHAU TIẾN BỘ</span>
+              <h2>Một câu hỏi nhỏ có thể<br><span>bắt đầu một ý tưởng lớn.</span></h2>
+              <p>Tham gia nhóm để học hỏi, chia sẻ kinh nghiệm và kết nối với những người có cùng đam mê.</p>
+            </div>
+            <div class="community-art" aria-hidden="true"><span class="bubble bubble-one"></span><span class="bubble bubble-two"></span></div>
+          </section>
+          <div class="join-grid">
+            <article class="join-card messenger">
+              <div class="join-logo">m</div>
+              <div><span>KẾT NỐI NHANH</span>
+                <h3>Messenger</h3>
+                <p>Nhận thông báo và trao đổi trong các chủ đề hàng ngày.</p>
+              </div>
+              <a class="join-button" href="https://m.me/j/o-38lGkDPf0vQ_yY/?send_source=gc%3Acopy_invite_link_t" target="_blank" rel="noopener">Tham gia nhóm <span>→</span></a>
+            </article>
+            <article class="join-card discord">
+              <div class="join-logo">◉</div>
+              <div><span>GỌI NHÓM &amp; CHIA SẺ</span>
+                <h3>Discord</h3>
+                <p>Tham gia phòng học, voice chat và hoạt động cùng cộng đồng.</p>
+              </div>
+              <a class="join-button" href="https://discord.com" target="_blank" rel="noopener">Tham gia server <span>→</span></a>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>document.querySelector(".mobile-menu").onclick=()=>document.querySelector(".sidebar").classList.toggle("open");</script>
+    <script src="../js/api-client.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>
